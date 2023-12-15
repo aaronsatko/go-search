@@ -17,6 +17,9 @@ func main() {
 	} else {
 		fmt.Printf("Element %d not found in the array\n", target)
 	}
+
+	fmt.Println("")
+
 	binary := search.BinarySearch(data, target)
 	fmt.Println("Binary Search")
 	if binary != -1 {
@@ -24,5 +27,21 @@ func main() {
 	} else {
 		fmt.Printf("Element %d not found in the array\n", target)
 	}
+
+	fmt.Println("")
+
+	graph := map[string][]string{
+		"A": {"B", "C"},
+		"B": {"A", "D", "E"},
+		"C": {"A", "F"},
+		"D": {"B"},
+		"E": {"B", "F"},
+		"F": {"C", "E"},
+	}
+
+	fmt.Println("Depth First Search")
+	search.DepthFirstSearch(graph, "A")
+
+	fmt.Println("")
 
 }
