@@ -30,6 +30,16 @@ func main() {
 
 	fmt.Println("")
 
+	fmt.Println("Jump Search")
+	jump := search.JumpSearch(data, target)
+	if jump != -1 {
+		fmt.Printf("Element %d found at index %d\n", target, jump)
+	} else {
+		fmt.Println("Element not found in the array")
+	}
+
+	fmt.Println("")
+
 	graph := map[string][]string{
 		"A": {"B", "C"},
 		"B": {"A", "D", "E"},
