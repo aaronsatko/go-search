@@ -44,4 +44,6 @@ func main() {
 
 	fmt.Println("")
 
+	fmt.Println("Breadth First Search")
+
 }
