@@ -7,19 +7,22 @@ import (
 )
 
 func main() {
-	// Example array to search in
 	data := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-
-	// Define the value to search for
 	target := 5
 
-	// Call the search algorithm
-	index := search.LinearSearch(data, target)
-
-	// Display the result
-	if index != -1 {
-		fmt.Printf("Element %d found at index %d\n", target, index)
+	linear := search.LinearSearch(data, target)
+	fmt.Println("Linear Search")
+	if linear != -1 {
+		fmt.Printf("Element %d found at index %d\n", target, linear)
 	} else {
 		fmt.Printf("Element %d not found in the array\n", target)
 	}
+	binary := search.BinarySearch(data, target)
+	fmt.Println("Binary Search")
+	if binary != -1 {
+		fmt.Printf("Element %d found at index %d\n", target, binary)
+	} else {
+		fmt.Printf("Element %d not found in the array\n", target)
+	}
+
 }
