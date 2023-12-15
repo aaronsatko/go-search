@@ -45,5 +45,6 @@ func main() {
 	fmt.Println("")
 
 	fmt.Println("Breadth First Search")
+	search.BreadthFirstSearch(graph, "A")
 
 }
