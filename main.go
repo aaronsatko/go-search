@@ -40,6 +40,18 @@ func main() {
 
 	fmt.Println("")
 
+	fmt.Println("Exponential Search")
+
+	expo := search.ExponentialSearch(data, target)
+
+	if expo != -1 {
+		fmt.Printf("Element %d found at index %d\n", target, expo)
+	} else {
+		fmt.Printf("Element %d not found in the array\n", target)
+	}
+
+	fmt.Println("")
+
 	graph := map[string][]string{
 		"A": {"B", "C"},
 		"B": {"A", "D", "E"},
