@@ -52,6 +52,17 @@ func main() {
 
 	fmt.Println("")
 
+	fmt.Println("Ternary Search")
+	ternary := search.TernarySearch(data, target)
+
+	if ternary != -1 {
+		fmt.Printf("Element %d found at index %d\n", target, ternary)
+	} else {
+		fmt.Printf("Element %d not found in the array\n", target)
+	}
+
+	fmt.Println("")
+
 	graph := map[string][]string{
 		"A": {"B", "C"},
 		"B": {"A", "D", "E"},
